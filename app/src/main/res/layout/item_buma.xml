@@ -5,42 +5,44 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_gravity="center"
-    android:layout_marginLeft="8dp"
-    android:layout_marginTop="6dp"
-    android:layout_marginRight="8dp"
-    android:layout_marginBottom="6dp"
-    app:cardCornerRadius="8dp"
-    app:cardElevation="8dp">
+    android:layout_marginLeft="12dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginRight="12dp"
+    android:layout_marginBottom="8dp"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="6dp"
+    app:cardBackgroundColor="@color/background_card">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:padding="12dp">
 
         <ImageView
             android:id="@+id/img_item_photo"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:layout_marginBottom="8dp"
-            app:layout_constraintWidth_percent=".3"
+            android:scaleType="centerCrop"
+            app:layout_constraintWidth_percent=".25"
             app:layout_constraintDimensionRatio="1:1"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             tools:src="@tools:sample/avatars"/>
 
-
         <TextView
             android:id="@+id/tv_tags"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
+            android:layout_marginStart="16dp"
             android:layout_marginEnd="8dp"
             android:layout_toEndOf="@id/img_item_photo"
-            android:fontFamily="sans-serif"
-            android:textSize="16sp"
-            android:textColor="@color/black"
+            android:fontFamily="sans-serif-medium"
+            android:textSize="18sp"
+            android:textColor="@color/text_primary"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/img_item_photo"
@@ -54,8 +56,11 @@
             android:layout_height="0dp"
             android:layout_marginTop="8dp"
             android:ellipsize="end"
-            android:maxLines="5"
-            android:textColor="@color/black"
+            android:maxLines="3"
+            android:textColor="@color/text_secondary"
+            android:fontFamily="sans-serif"
+            android:textSize="14sp"
+            android:lineSpacingExtra="2dp"
             app:layout_constraintBottom_toBottomOf="@+id/img_item_photo"
             app:layout_constraintEnd_toEndOf="@+id/tv_tags"
             app:layout_constraintStart_toStartOf="@+id/tv_tags"

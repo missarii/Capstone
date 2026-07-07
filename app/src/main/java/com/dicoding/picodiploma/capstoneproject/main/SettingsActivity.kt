@@ -35,25 +35,25 @@ class SettingsActivity : AppCompatActivity() {
     }
 
     private fun setupLanguage() {
-        binding.btnLanguage.setOnClickListener {
+        binding.languageCard.setOnClickListener {
             startActivity(Intent(Settings.ACTION_LOCALE_SETTINGS))
         }
     }
 
     private fun setupHome() {
-        binding.home.setOnClickListener {
+        binding.homeCard.setOnClickListener {
             startActivity(Intent(this, MainActivity::class.java))
         }
     }
 
     private fun setupBackground() {
-        binding.btnAboutus.setOnClickListener {
+        binding.aboutCard.setOnClickListener {
             startActivity(Intent(this, BackgroundActivity::class.java))
         }
     }
 
     private fun signOut() {
-        binding.btnLogout.setOnClickListener {
+        binding.logoutCard.setOnClickListener {
             auth.signOut()
             startActivity(Intent(this, LoginActivity::class.java))
             finish()
